@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web前端开发技术</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background: linear-gradient(to bottom, #b8d4f0, #ffffff);
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(to bottom, #a8c6e8, #cde0f2);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #8bb3d9;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .www-logo {
+            width: 100px;
+            height: 100px;
+            background: #4a90e2;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .main-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        
+        .nav-menu {
+            background: #d6e8f5;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #b8d4f0;
+        }
+        
+        .nav-menu a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            background: #4a90e2;
+            color: white;
+        }
+        
+        .content-area {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+        
+        .left-column {
+            flex: 1;
+        }
+        
+        .right-column {
+            flex: 1;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+        
+        .content-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .content-list li {
+            margin-bottom: 12px;
+        }
+        
+        .content-list a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 16px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .content-list a::before {
+            content: "►";
+            position: absolute;
+            left: 0;
+            color: #4a90e2;
+        }
+        
+        .content-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #d6e8f5;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .text-sample {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-section">
+            <div class="www-logo">
+                🌐<br>WWW
+            </div>
+            <h1 class="main-title">Web前端开发技术</h1>
+        </div>
+    </div>
+    
+    <div class="nav-menu">
+        <a href="text.html">实验1</a>
+        <a href="a.html">实验2</a>
+        <a href="img.html">实验3</a>
+        <a href="list.html">实验4</a>
+        <a href="form.html">实验5</a>
+        <a href="#" onclick="alert('实验6页面待开发')">实验6</a>
+    </div>
+    
+    <div class="content-area">
+        <div class="left-column">
+            <h2 class="section-title">HTML标记</h2>
+            <ul class="content-list">
+                <li><a href="text.html">文本格式化</a></li>
+                <li><a href="text.html#links">超链接</a></li>
+                <li><a href="img.html">图像</a></li>
+                <li><a href="list.html">列表</a></li>
+                <li><a href="form.html">表格</a></li>
+                <li><a href="form.html">表单</a></li>
+            </ul>
+        </div>
+        
+        <div class="right-column">
+            <h2 class="section-title">格式化文本</h2>
+            
+            <div class="text-sample">
+                <h3>加粗文本</h3>
+                <p><strong>斜体文本</strong><br>
+                <em>粗斜体文本</em><br>
+                <u>被强调的文本</u></p>
+            </div>
+            
+            <div class="text-sample">
+                <h3>加框文本</h3>
+                <p style="font-size: 12px;">小号字体文本</p>
+                <p>普通文本<sup>上标文本</sup></p>
+                <p>普通文本<sub>下标加粗文本</sub></p>
+                <p style="text-align: left;">从左向右排列的文本</p>
+                <p style="text-align: right;">文本的列排左向右从</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        信息科学与工程学院@2023级软工1班 学号 姓名
+    </div>
+</body>
+</html>
