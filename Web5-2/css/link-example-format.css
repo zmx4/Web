@@ -1,0 +1,44 @@
+/* 1. 为包含id属性的a元素添加样式：蓝色背景、黄色加粗字体 */
+a[id] {
+    background-color: blue;
+    color: yellow;
+    font-weight: bold;
+}
+
+/* 2. 为包含href和title属性的a元素添加样式：黄色背景、绿色字体 */
+a[href][title] {
+    background-color: yellow;
+    color: green;
+}
+
+/* 3. 为id属性值是first的a元素添加样式：蓝色背景、黄色加粗字体 */
+a#first {
+    background-color: blue;
+    color: yellow;
+    font-weight: bold;
+}
+
+/* 4. 为lang属性值是zh或以zh-开头的a元素添加样式：灰色背景、黄色字体 */
+a[lang|="zh"] {
+    background-color: gray;
+    color: yellow;
+}
+
+/* 5. 为title属性值包含site子串的a元素添加样式：黑色背景、白色字体 */
+a[title*="site"] {
+    background-color: black;
+    color: white;
+}
+
+/* 6. 为title属性值以http://子串开头的a元素添加样式：橙色背景、绿色字体 */
+a[title^="http://"] {
+    background-color: orange;
+    color: green;
+}
+
+/* 7. 为title属性值包含website的a元素添加样式：橙色背景、绿色字体 */
+/* 注意：这个选择器与第5个选择器可能存在重叠，根据CSS规则，后定义的样式会覆盖先定义的样式 */
+a[title*="website"] {
+    background-color: orange;
+    color: green;
+}
