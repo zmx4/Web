@@ -25,20 +25,20 @@ a[lang|="zh"] {
 }
 
 /* 5. 为title属性值包含site子串的a元素添加样式：黑色背景、白色字体 */
-a[title*="site"] {
+.nav  a[title*="site"] {
     background-color: black;
     color: white;
 }
 
 /* 6. 为title属性值以http://子串开头的a元素添加样式：橙色背景、绿色字体 */
-a[title^="http://"] {
+.nav a[title^="http://"] {
     background-color: orange;
     color: green;
 }
 
 /* 7. 为title属性值包含website的a元素添加样式：橙色背景、绿色字体 */
 /* 注意：这个选择器与第5个选择器可能存在重叠，根据CSS规则，后定义的样式会覆盖先定义的样式 */
-a[title*="website"] {
+.nav a[title*="website"] {
     background-color: orange;
     color: green;
 }

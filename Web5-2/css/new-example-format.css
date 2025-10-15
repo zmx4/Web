@@ -53,5 +53,12 @@ a:active {
 
 /* 5. 设置文档内的锚点链接，目标文本添加绿色背景 (使用目标伪类) */
 :target {
-    background-color: lightgreen; /* 使用浅绿色以确保文本可读性 */
+    /* background-color:red; */
+    background-color: lightgreen; 
+}
+#one:target {
+  background-color: lightgreen;
+  transition: background-color 0.5s ease;
+  padding: 10px;
+  border-radius: 5px;
 }

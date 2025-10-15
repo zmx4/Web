@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>使用绝对布局实现分栏</title>
+<style type="text/css">
+body{
+  text-align:center;
+}
+
+#father {
+  width:840px;
+  height:520px;
+  background-color:#aaaaaa;
+  margin:auto;
+  position:relative;
+  
+
+
+}
+
+#left {
+  width:200px;
+  height:500px;
+  background-color:#ff00ff;
+  position:absolute;
+  left:10px;
+  top:10px;
+}
+
+#right {
+  width:200px;
+  height:500px;
+  background-color:#FFFF00;
+  position:absolute;
+  left:630px;
+  top:10px;
+}
+
+#main {
+  width:400px;
+  height:500px;
+  background-color:#00ff00;
+ position:absolute;
+  left:220px;
+  top:10px;}
+</style>
+</head>
+<body>
+<div id="father">
+  <div id ="left">Left</div>
+  <div id ="main">Main</div>
+  <div id ="right">Right</div>
+</div>
+</body>
+</html>

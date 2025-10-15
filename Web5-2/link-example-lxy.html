@@ -42,15 +42,39 @@
     text-decoration: none;
 }
 .nav a:hover {
-    background: green;
-    color: #fff;
+    background-color:green;
+    color:#fff;
 }
+
+.nav a[id]
+{
+	background-color:blue;
+	color:yellow;
+    font-weight:bold;
+	}
+a[href][title]{
+	background-color: yellow;
+	color:green;
+}
+.nav a[id="first"]{
+	background-color: blue;
+	color:yellow;
+	font-weight:bold;
+}
+.nav a[title*="site"] {
+    background-color: black;
+    color: white;
+}
+.nav a[lang|="zh"]{
+	background-color:gray;
+	color:yellow;
+}
+
 .nav a[title^="http://"] {
     background-color: orange;
     color: green;
 }
 </style>
-<link href="css/link-example-format.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
