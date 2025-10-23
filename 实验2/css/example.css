@@ -1,6 +1,11 @@
 @charset "utf-8";
-div#images img {
+div#images {
 	display: block;
+	background-image: url('../images/1.jpg'); /* 替换为你的图片路径 */
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
 }
 
 div#text {
@@ -17,6 +22,7 @@ div#text ul {
 	padding-left: 20px;
 }
 body {
+	margin:0;
     background-image: url('images/1.jpg'); /* 替换为你的图片路径 */
     background-repeat: no-repeat;
     background-attachment: fixed;
