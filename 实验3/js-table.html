@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>软件开发基础课程实验</title>
+  <title>Javascript编程</title>
   <link type="text/css" rel="stylesheet" href="css/divcsslayout.css" />
 </head>
 
@@ -13,7 +13,7 @@
         <image src="images/logo.jpg" width="600%" />
       </div>
       <div id="htitle">
-        <h1>层叠样式表</h1>
+        <h1>Javascript编程</h1>
       </div>
     </div>
     <div id="navigate">
@@ -28,20 +28,22 @@
     </div>
     <div id="menu">
       <div id="subtitle">
-        <h2>CSS应用</h2>
+        <h2>JS应用</h2>
       </div>
       <ul class="menustyle">
-        <li><a href="index.html">网页样式的设计</a></li>
-        <li><a href="css-text.html">文字样式的设计</a></li>
-        <li><a href="css-table.html">表格样式的设计</a></li>
+        <li><a href="index.html">图像交换</a></li>
+        <li><a href="js-clock.html">网页秒表</a></li>
+        <li><a href="js-table.html">表格编辑</a></li>
       </ul>
     </div>
     <div id="content">
       <h3>表格编辑</h3>
       <!-- <p class="ftcss"> 网页内容！</p> -->
       <p>
-        改变第<input type="text" id="rowIdx" size="2"/>行第<input type="text" id="colIdx" size="2"/>列内容为<input type="text" id="newContent"/><input type="button" value="修改" onclick="modifyTable()"/>
+        改变第<input type="text" id="rowIdx" size="2" />行第<input type="text" id="colIdx" size="2" />列内容为<input type="text"
+          id="newContent" /><input type="button" value="修改" onclick="modifyTable()" />
       </p>
+      <p>Javascript知识点</p>
       <div id="tbb">
 
         <table id="myTable" width="400" align="center" border="3" cellspacing="0" cellpadding="4">
@@ -67,7 +69,7 @@
             </td>
             <td>定义表格的列标签</td>
           </tr>
-          
+
         </table>
       </div>
       <script>

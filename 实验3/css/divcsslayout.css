@@ -151,11 +151,11 @@ span#xhx {
 }
 table {
     /* 仅给表格外边框样式，避免影响单元格内边框 */
-    border-top: 3px double blue;
+    /* border-top: 3px double blue;
     border-bottom: 3px double blue;
     border-left: 1px dotted red;
-    border-right: 1px dotted red;
-
+    border-right: 1px dotted red; */
+    border: black 3px default;
     /* 不与单元格边框合并，防止样式“侵入”内边框 */
     border-collapse: separate;
     /* 去掉外框与单元格之间的空隙 */
