@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>软件开发基础课程实验</title>
+  <link type="text/css" rel="stylesheet" href="css/divcsslayout.css" />
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="logo">
+        <image src="images/logo.jpg" width="600%" />
+      </div>
+      <div id="htitle">
+        <h1>层叠样式表</h1>
+      </div>
+    </div>
+    <div id="navigate">
+      <ul class="navstyle">
+        <li><a href="# ">实验1</a></li>
+        <li><a href="# ">实验2</a></li>
+        <li><a href="# ">实验3</a></li>
+        <li><a href="# ">实验4</a></li>
+        <li><a href="# ">实验5</a></li>
+        <li><a href="# ">实验6</a></li>
+      </ul>
+    </div>
+    <div id="menu">
+      <div id="subtitle">
+        <h2>CSS应用</h2>
+      </div>
+      <ul class="menustyle">
+        <li><a href="index.html">网页样式的设计</a></li>
+        <li><a href="css-text.html">文字样式的设计</a></li>
+        <li><a href="css-table.html">表格样式的设计</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <h3>表格编辑</h3>
+      <!-- <p class="ftcss"> 网页内容！</p> -->
+      <p>
+        改变第<input type="text" id="rowIdx" size="2"/>行第<input type="text" id="colIdx" size="2"/>列内容为<input type="text" id="newContent"/><input type="button" value="修改" onclick="modifyTable()"/>
+      </p>
+      <div id="tbb">
+
+        <table id="myTable" width="400" align="center" border="3" cellspacing="0" cellpadding="4">
+          <tr>
+            <th>标签</th>
+            <th>作用</th>
+          </tr>
+          <tr>
+            <td>
+              &lt;table&gt;
+            </td>
+            <td>定义一个表格</td>
+          </tr>
+          <tr>
+            <td>
+              &lt;tr&gt;
+            </td>
+            <td>定义表格的行标签</td>
+          </tr>
+          <tr>
+            <td>
+              &lt;td&gt;
+            </td>
+            <td>定义表格的列标签</td>
+          </tr>
+          
+        </table>
+      </div>
+      <script>
+        function modifyTable() {
+          var rowStr = document.getElementById("rowIdx").value;
+          var colStr = document.getElementById("colIdx").value;
+          var content = document.getElementById("newContent").value;
+          var table = document.getElementById("myTable");
+
+          if (rowStr == "" || colStr == "") {
+            alert("请输入行号和列号");
+            return;
+          }
+
+          var r = parseInt(rowStr);
+          var c = parseInt(colStr);
+
+          // 假设用户输入的是从1开始的行号和列号
+          if (r < 1 || r > table.rows.length) {
+            alert("行号不存在");
+            return;
+          }
+
+          var targetRow = table.rows[r - 1];
+          if (c < 1 || c > targetRow.cells.length) {
+            alert("列号不存在");
+            return;
+          }
+
+          targetRow.cells[c - 1].innerText = content;
+        }
+      </script>
+    </div>
+    <div id="footer">临沂大学信息科学与工程学院@2024级软件工程3班 钟明熹</div>
+  </div>
+</body>
+
+</html>

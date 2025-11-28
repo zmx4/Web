@@ -1,0 +1,39 @@
+@charset "utf-8";
+div#images {
+	display: block;
+	background-image: url('../images/1.jpg'); /* 替换为你的图片路径 */
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+}
+
+div#text {
+	z-index: 1;
+	max-width: 60%;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 12px 16px;
+	border-radius: 8px;
+}
+
+div#text ul {
+	margin: 0;
+	padding-left: 20px;
+}
+body {
+	margin:0;
+    background-image: url('images/1.jpg'); /* 替换为你的图片路径 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: cover;
+}
+div#space{
+    height: 1000px;
+    padding: 0px 100px 0px 0px;
+}
+div#text2{
+    padding: 1000px 0px 0px 0px;
+    color:aquamarine;
+}
