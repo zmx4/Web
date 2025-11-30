@@ -33,9 +33,11 @@ div#header {
 
 div#htitle {
     /* 设置logo中标题1的位置 */
-    padding-top: 25px; /* 垂直居中 */
+    padding-top: 15px; /* 垂直居中 */
     padding-right: 100px;
     font-family: "幼圆", "YouYuan", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 div#navigate {
@@ -161,9 +163,9 @@ table {
     /* 去掉外框与单元格之间的空隙 */
     border-spacing: 0;
 }
-th,td {
+/* th,td {
     border: 1px solid black;
-}
+} */
 .menustyle > li:hover {
     background-color: red;
 }
