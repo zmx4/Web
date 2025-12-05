@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+   <title>The Radio_click Example of JavaScript!</title>
+  
+  <script>
+     function chkPassword1()
+     {
+        var init=document.getElementById("initial");
+        
+        if(init.value=="")
+        {
+         document.getElementById("ps1").innerHTML="请输入密码";
+          init.focus();
+          return false;
+        }
+return true;
+     }
+     function chkPassword2()
+     {
+        var init=document.getElementById("initial");
+        var sec=document.getElementById("second");
+       
+        if(sec.value=="")
+        {
+           document.getElementById("ps2").innerHTML="请验证密码";
+        //  sec.focus();
+          return false;
+        }
+        if(init.value!=sec.value)
+        {
+     document.getElementById("ps2").innerHTML="两次密码不一致";
+          init.focus();
+         
+          return false;
+        }
+       return true;
+     }
+   function chkPassword(){
+if(chkPassword1()&&chkPassword2()) {return true;}
+
+else {alert("表单输入有错误");return false;}
+}
+   </script>
+  </head>
+<body>
+ <h3>Password Input</h3>
+<table>
+ <form action="b.jsp" method="post" id="myform" onsubmit="return chkPassword()">
+  <tr><td>Your password:&nbsp;&nbsp;</td><td><input type="password" id="initial" size="10" onblur="chkPassword1()" /></td><td><p id="ps1" style="color:red"></p></td></tr>
+     <tr><td>Verify password:</td><td><input type="password" id="second" size="10" onblur="chkPassword2()"/></td><td><p id="ps2" style="color: red;"></p></td></tr>
+     <tr><td><input type="submit" value="submit" /></td>
+     <td><input type="reset" value="reset" /></td></tr> 
+ </form>
+</table>
+ 
+</body>
+</html>

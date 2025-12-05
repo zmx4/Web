@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>软件开发基础课程实验</title>
+<link type="text/css" rel="stylesheet" href="css/divcsslayout.css" />
+<!-- <link type="text/css" rel="stylesheet" href="css/example.css" /> -->
+<script type="text/javascript" src="js/image.js"></script>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div id="logo">
+      <image src="images/logo.jpg" width="600%" />
+    </div>
+    <div id="htitle"><p>表单验证</p></div>
+  </div>
+  <div id="navigate">
+    <ul class="navstyle">
+      <li><a href="# ">实验1</a></li>
+      <li><a href="# ">实验2</a></li>
+      <li><a href="# ">实验3</a></li>
+      <li><a href="# ">实验4</a></li>
+      <li><a href="# ">实验5</a></li>
+      <li><a href="# ">实验6</a></li>
+    </ul>
+  </div>
+  <div id="menu">
+    <div  id="subtitle"><h2>JS验证</h2></div>
+    <ul class="menustyle">
+      <li><a href="index.html">JS客户端验证</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <h3>JavaScript客户端验证</h3>
+    <p>用户注册信息</p>
+    <!-- <p class="ftcss"> 网页内容！</p> -->
+    <div id="object">
+      <!-- <iframe src="example.html" style="max-width: 500px; max-height: 300px; width: 100%; height: 100%;"></iframe> -->
+      <table>
+        <form>
+        <tr>
+          <th class="firstth">
+            用户名：
+          </th>
+          <th class="secondth">
+            <input type="text" id="username" size="15" onblur="checkusername()"/>
+          </th>
+          <th class="thirdth"><span id="alertusername">
+            *以英文开头，4-16个英文,数字或下划线字符！
+          </span></th>
+        </tr>
+        <tr>
+          <th class="firstth">
+            密码：
+          </th>
+          <th class="secondth">
+            <input type="text" id="userpassword" size="15" onblur="checkuserpassword()"/>
+          </th>
+          <th class="thirdth"><span id="alertuserpassword">
+            <p>*英文字母，数字，下划线，且长度控制在6-24个字符！</p>
+          </span></th>
+        </tr>
+        <tr>
+          <th class="firstth">
+            确认密码：
+          </th>
+          <th class="secondth">
+            <input type="text" id="userpasswordrepeat" size="15" onblur="checkrepeat()"/>
+          </th>
+          <th class="thirdth"><span id="alertrepeat">
+            *请再次输入密码！
+          </span></th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <input type="button" value="提交" id="submit">
+              <input type="reset" value="重置" id="reset"/>
+            </div>
+          </th>
+        </tr>
+      </table>
+    </form>
+    </div>
+  </div>
+  <div id="footer">临沂大学信息科学与工程学院@2024级软件工程3班 钟明熹</div>
+</div>
+</body>
+</html>

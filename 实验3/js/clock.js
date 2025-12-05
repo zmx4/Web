@@ -5,8 +5,15 @@ window.onload = function () {
     var b2 = document.getElementById('b2');
     var ti = document.getElementById('texti');
     var timer = null;
-    b1.onclick = function () { timer = window.setInterval(times, 1000); }
-    b2.onclick = function () { window.clearInterval(timer); }
+    b1.onclick = function () {
+        if (timer === null) {
+            timer = window.setInterval(times, 1000);
+        }
+    }
+    b2.onclick = function () {
+        window.clearInterval(timer);
+        timer = null;
+    }
     function times() {
         var t2 = new Date();
         ti.value = t2.toLocaleTimeString();

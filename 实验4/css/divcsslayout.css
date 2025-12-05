@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* CSS Document */
+a:link {
+    /* color: #000; */
+    text-decoration: none;
+    font-size: 16px;
+}
+a:visited {
+    /* color: #000; */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    font-size: larger;
+}
+a:active {
+    /* color: #000; */
+    text-decoration: none;
+}
+
+div#container {
+    width: 800px;
+    margin: auto; /* div水平居中 */
+}
+
+div#header {
+    background-image: url(../images/bg1.png);
+    height: 150px;
+    text-align: center;
+    color: aquamarine;
+    /* background-image: "../images/99656.png"; */
+}
+
+div#htitle {
+    /* 设置logo中标题1的位置 */
+    padding-top: 15px; /* 垂直居中 */
+    padding-right: 100px;
+    font-family: "幼圆", "YouYuan", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+div#navigate {
+    background-color: #d3effc;
+    text-align: center;
+    height: 40px;
+    float: left; /* 消除div上下的空白间隔 */
+    width: 800px;
+    
+}
+div#navigate a {
+    /* margin: 0px; 去除ul元素默认的外边距 */
+    padding-left: 10px; /* 去除ul元素默认的内填充 */
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.navstyle {
+    margin: 4px; /* 覆盖列表默认的外边距，以便控制导航栏的高度 */
+    list-style-type: none; /* 去除列表项前面的符号 */
+}
+.navstyle li {
+    line-height: 20pt; /* 控制导航栏的高度 */
+    display: inline; /* 水平显示列表项 */
+    padding: 6px; /* 增加列表项，即导航链接之间的间隔 */
+}
+
+div#menu {
+    background-color: #f5fbfb;
+    width: 198px;
+    float: left; /* 为其后的div留位置 */
+    height: 400px;
+    text-align: center;
+    border: yellowgreen 1px solid;
+}
+.menustyle {
+    list-style-type: none; /* 去除列表项前面的符号 */
+    margin-left: 0px; /* 覆盖列表默认的外边距，以便列表项能水平居中 */
+    padding-left: 0px; /* 覆盖列表默认的内填充，以便列表项能水平居中 */
+}
+.menustyle > li > a:hover {
+    background-color: red;
+}
+.menustyle li {
+    line-height: 24pt; /* 设置列表项，即二级导航链接纵向之间的间隔 */
+}
+h2 {
+    margin-bottom: 4px;
+    font-size: 18pt;
+    color: darkorange;
+}
+
+div#content {
+    width: 598px; /* 两个div的宽度加上两侧的边距、边框、填充不能超出父容器的宽度 */
+    float: left; /* 与前面的div横向并列显示 */
+    height: 400px; /* 前后两个div的高度加上纵向的边距、边框、填充应一致 */
+    /* padding:16px; */
+    text-align: center;
+    border: yellowgreen 1px solid;
+}
+
+div#footer {
+    /* background-color:#d3effc; */
+    text-align: center;
+    line-height: 50px;
+    width: 800px;
+    clear: left; /* 必须清除浮动影响才能放在前面两个div之后 */
+    background-image: url(../images/bg2.jpg);
+}
+div#subtitle {
+    /* background-color: #cce7e7; */
+    margin-bottom: 4px;
+    color: #333333;
+}
+
+div#object {
+    height: 600px;
+    width: 600px;
+    text-align: center;
+    /* margin: 0 auto; */
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */
+}
+
+div#object iframe {
+    display: block;
+}
+
+div#logo {
+    float: left;
+    height: 12px;
+    width: 12px;
+    margin-left: 20px;
+    padding: 40px;
+}
+
+div#textcss {
+    font-family: 宋体;
+    font-size: 16px;
+    color: #0011aa;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 160%;
+}
+span#ct {
+    font-weight: bold;
+}
+span#xt {
+    font-style: italic;
+}
+span#xhx {
+    text-decoration: underline;
+}
+table {
+    /* 仅给表格外边框样式，避免影响单元格内边框 */
+    /* border-top: 3px double blue;
+    border-bottom: 3px double blue;
+    border-left: 1px dotted red;
+    border-right: 1px dotted red; */
+    border: black 1px default;
+    /* 不与单元格边框合并，防止样式“侵入”内边框 */
+    border-collapse: separate;
+    /* 去掉外框与单元格之间的空隙 */
+    border-spacing: 0;
+}
+/* th,td {
+    border: 1px solid black;
+} */
+.menustyle > li:hover {
+    background-color: red;
+}
+.menustyle > li > a:hover {
+    background-color: red;
+}
+
+div#imgdiv{
+    /* float: left; */
+    /* display: flex; */
+    text-align: center;
+    /* max-width: ; */
+    /* width: 89800px; */
+    /* height: 300px; */
+    /* background-color: #0011aa; */
+    margin: 0 auto;
+}
+div#button{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.firstth{
+    width: 90px;
+    text-align: right;
+    height: 16px;
+}
+.secondth{
+    height: 16px;
+    width: 50px;
+}
+.thirdth{
+    width: 400px;
+    font-size: 15px;
+    height: 16px;
+}
+#alertuserpassword{
+    width: 400px;
+}
+#alertusername{
+    width: 400px;
+}
