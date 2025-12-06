@@ -87,4 +87,14 @@ function checkrepeat(){
         art.innerHTML='<img src="images/right.jpg" />';
     }
     return true;
+} 
+function submitForm(){
+    checkusername();
+    checkuserpassword();
+    checkrepeat();
+    if(checkusername()&&checkuserpassword()&&checkrepeat())
+    {
+        alert("提交成功！");
+    }
+    // alert("提交成功！");
 }

@@ -191,16 +191,19 @@ div#button{
 .firstth{
     width: 90px;
     text-align: right;
-    height: 16px;
+    /* height: 16px; */
+    height: 26px;
 }
 .secondth{
-    height: 16px;
+    /* height: 16px; */
     width: 50px;
+    height: 26px;
 }
 .thirdth{
     width: 400px;
     font-size: 15px;
-    height: 16px;
+    height: 26px;
+    text-align: left;
 }
 #alertuserpassword{
     width: 400px;
