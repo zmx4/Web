@@ -81,12 +81,11 @@ function checkrepeat() {
     return true;
 }
 function submitForm() {
-    var u = checkusername();
-    var p = checkuserpassword();
-    var r = checkrepeat();
-    if (u && p && r) {
+    checkusername();
+    checkuserpassword();
+    checkrepeat();
+    if (checkusername() && checkuserpassword() && checkrepeat()) {
         alert("提交成功！");
-        return true;
     }
-    return false;
+    // alert("提交成功！");
 }
