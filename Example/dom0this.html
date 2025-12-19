@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM Event</title>
+<style type="text/css">
+#outdiv {
+	width:240px;
+	height:160px;
+	background-color:#D3E2F5;
+	margin:20px;
+	padding:16px;
+}
+#inndiv {
+	width:140px;
+	height:60px;
+	background-color:#A8C6ED;
+	margin:16px;
+	padding:16px;
+}	
+</style>
+<script type="text/javascript">
+	var p=
+	{
+		id: "pid",
+		info: function() {
+			alert(this.id + "的事件监听器程序！");
+		}
+	};
+</script>
+</head>
+<body id="pagebd">
+<div id="outdiv">
+	<p>外层div</p>
+	<div id="inndiv">内嵌的div</div>
+</div>
+<script type="text/javascript">
+	document.getElementById("pagebd").onclick=p.info;
+	document.getElementById("outdiv").onclick=p.info;
+	document.getElementById("inndiv").onclick=p.info;
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数的参数</title>
+</head>
+<body>
+<script type="text/javascript">
+	function fnarg(){ 
+		for(var i=0;i<arguments.length;i++){ 
+			alert("第" + i + "个实参值：" + arguments[i]); 
+		} 
+	}  
+	fnarg("实参X");
+	fnarg(26,"Hello",8); 
+</script>
+</body>
+</html>

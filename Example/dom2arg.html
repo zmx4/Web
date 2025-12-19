@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM Event</title>
+<style type="text/css">
+#outdiv {
+	width:240px;
+	height:160px;
+	background-color:#D3E2F5;
+	margin:20px;
+	padding:16px;
+}
+#inndiv {
+	width:140px;
+	height:60px;
+	background-color:#A8C6ED;
+	margin:16px;
+	padding:16px;
+}	
+</style>
+<script type="text/javascript">
+	var handler=function(evt) {
+		var evtsrc="标记为" + evt.target.tagName + "；id=" + evt.target.id + "的事件源引发的事件！" + "事件发生的位置：(" + evt.clientX + " : " + evt.clientY + ")";
+		var evtphase=evt.eventPhase==1? "捕获" : (evt.eventPhase==2? "目标节点" : "冒泡");
+		var evtstream="事件流在" + evtphase + "阶段，执行标记为" + evt.currentTarget.tagName + "；id=" + evt.currentTarget.id + "的事件处理程序！";
+		alert(evtsrc + "\n" + evtstream);	
+	}
+</script>
+</head>
+<body id="pagebd">
+<div id="outdiv">
+	<p>外层div</p>
+	<div id="inndiv">内嵌的div</div>
+</div>
+<script type="text/javascript">
+	document.getElementById("pagebd").addEventListener("click",handler,true);
+	document.getElementById("outdiv").addEventListener("click",handler,true);
+	document.getElementById("inndiv").addEventListener("click",handler,true);
+	document.getElementById("pagebd").addEventListener("click",handler);
+	document.getElementById("outdiv").addEventListener("click",handler);
+	document.getElementById("inndiv").addEventListener("click",handler);
+</script>
+</body>
+</html>

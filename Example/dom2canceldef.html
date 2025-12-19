@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM Event</title>
+<style type="text/css">
+#outdiv {
+	width: 320px;
+	height: 160px;
+	margin: 20px;
+	padding: 16px;
+}
+</style>
+<script type="text/javascript">
+	var handler=function() {
+		var prmptstr="确认要提交表单中的数据吗？";
+		if(arguments[0].target.id=="lyulink") {
+			prmptstr="确认要导航到临沂大学的主页吗？";
+		}
+		if(!confirm(prmptstr)) {
+			arguments[0].preventDefault();	
+		}
+	}
+</script>
+</head>
+<body>
+<div id="outdiv">
+  <p><a href="http://www.lyu.edu.cn/" id="lyulink">临沂大学</a></p>
+  <form>
+    <fieldset>
+      <legend>表单示例</legend>
+      <label for="uname">用户名：</label>
+      <input type="text" name="uname" id="uname" title="请输入用户名！"/>
+      <input type="submit" value="提交" id="sbmbtn"/>
+    </fieldset>
+  </form>
+</div>
+<script type="text/javascript">
+	document.getElementById("lyulink").addEventListener("click",handler);
+	document.getElementById("sbmbtn").addEventListener("click",handler);
+</script>
+</body>
+</html>

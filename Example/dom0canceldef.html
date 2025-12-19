@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM Event</title>
+<style type="text/css">
+#outdiv {
+	width: 320px;
+	height: 160px;
+	margin: 20px;
+	padding: 16px;
+}
+</style>
+<script type="text/javascript">
+	var handler=function() {
+		return confirm(arguments[0]);	
+	}
+</script>
+</head>
+<body id="pagebd">
+<div id="outdiv">
+  <p><a href="http://www.lyu.edu.cn/" 
+    	onclick="return confirm('确认要导航到临沂大学的主页吗？')">临沂大学</a></p>
+  <form action="dom0this.html">
+    <fieldset>
+      <legend>表单示例</legend>
+      <label for="uname">用户名：</label>
+      <input type="text" name="uname" id="uname" title="请输入用户名！"/>
+      <input type="submit" value="提交" onclick="return confirm('确认要提交表单中的数据吗？')"/>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>
