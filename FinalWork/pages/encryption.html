@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密工具 - 多功能工具集</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛠️ 多功能工具集</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="calculator.html">计算器</a></li>
+                    <li><a href="timer.html">计时工具</a></li>
+                    <li><a href="encryption.html" class="active">加密工具</a></li>
+                    <li><a href="encoding.html">编码工具</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-content">
+            <h2>🔐 趣味加密工具</h2>
+            
+            <div class="form-group">
+                <label>加密方式：</label>
+                <select id="encryption-method">
+                    <option value="reverse">反转加密（文字倒序）</option>
+                    <option value="caesar">凯撒密码（位移加密）</option>
+                    <option value="morse">摩斯密码</option>
+                    <option value="emoji">表情符号加密</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="shift-group" style="display:none;">
+                <label>位移量（1-25）：</label>
+                <input type="number" id="shift-value" min="1" max="25" value="3">
+            </div>
+
+            <div class="form-group">
+                <label>输入文本：</label>
+                <textarea id="input-text" placeholder="请输入要加密/解密的文本"></textarea>
+            </div>
+
+            <div class="encryption-controls">
+                <button class="btn" onclick="encryptText()">🔒 加密</button>
+                <button class="btn btn-secondary" onclick="decryptText()">🔓 解密</button>
+                <button class="btn btn-secondary" onclick="clearText()">清空</button>
+            </div>
+
+            <div class="form-group">
+                <label>输出结果：</label>
+                <div class="output-area" id="output-text"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 多功能工具集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/encryption.js"></script>
+</body>
+</html>

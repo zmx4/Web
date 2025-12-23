@@ -1,0 +1,1053 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    animation: gradientShift 15s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* 背景渐变动画 */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 从左侧滑入 */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 从右侧滑入 */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 缩放动画 */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 弹跳动画 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+/* 旋转脉冲 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 闪烁效果 */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* 摇晃效果 */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 0.5s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
+    color: #667eea;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    animation: pulse 2s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
+
+nav li {
+    margin: 0 15px;
+    animation: fadeIn 0.5s ease-out backwards;
+}
+
+nav li:nth-child(1) { animation-delay: 0.1s; }
+nav li:nth-child(2) { animation-delay: 0.2s; }
+nav li:nth-child(3) { animation-delay: 0.3s; }
+nav li:nth-child(4) { animation-delay: 0.4s; }
+nav li:nth-child(5) { animation-delay: 0.5s; }
+nav li:nth-child(6) { animation-delay: 0.6s; }
+nav li:nth-child(7) { animation-delay: 0.7s; }
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+nav a:hover::before {
+    left: 100%;
+}
+
+nav a:hover,
+nav a.active {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* 主内容区域 */
+main {
+    padding: 40px 20px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    animation: scaleIn 0.8s ease-out;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: slideInLeft 0.8s ease-out;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    animation: slideInRight 0.8s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+/* 工具网格 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tool-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease-out backwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.tool-card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.tool-card:nth-child(1) { animation-delay: 0.1s; }
+.tool-card:nth-child(2) { animation-delay: 0.2s; }
+.tool-card:nth-child(3) { animation-delay: 0.3s; }
+.tool-card:nth-child(4) { animation-delay: 0.4s; }
+.tool-card:nth-child(5) { animation-delay: 0.5s; }
+.tool-card:nth-child(6) { animation-delay: 0.6s; }
+
+.tool-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+}
+
+.tool-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    animation: bounce 2s ease infinite;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover .tool-icon {
+    animation: none;
+    transform: rotateY(360deg);
+}
+
+.tool-card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover h3 {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.tool-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    background: #764ba2;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.95) translateY(0);
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    box-shadow: 0 8px 25px rgba(90, 98, 104, 0.5);
+}
+
+/* 页面内容容器 */
+.page-content {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    animation: scaleIn 0.6s ease-out;
+    transition: all 0.3s ease;
+}
+
+.page-content:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.page-content h2 {
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+    animation: slideInDown 0.6s ease-out;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.page-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    animation: expandWidth 0.8s ease-out 0.3s backwards;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+    animation: shake 0.5s ease-in-out;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 计算器样式 */
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.calculator-display {
+    width: 100%;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    animation: slideInDown 0.5s ease-out;
+}
+
+.calculator-display:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator-buttons button {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator-buttons button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+.calculator-buttons button:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+.calculator-buttons button:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.calculator-buttons button:active {
+    transform: scale(0.95);
+}
+
+.calculator-buttons button.operator {
+    background: #667eea;
+    color: white;
+}
+
+.calculator-buttons button.operator:hover {
+    background: #5568d3;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+.calculator-buttons button.equals {
+    background: #28a745;
+    color: white;
+    grid-column: span 2;
+    animation: pulse 2s ease infinite;
+}
+
+.calculator-buttons button.equals:hover {
+    background: #218838;
+}
+
+.calculator-buttons button.clear {
+    background: #dc3545;
+    color: white;
+}
+
+.calculator-buttons button.clear:hover {
+    background: #c82333;
+}
+
+/* 计时工具样式 */
+.timer-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background: #667eea;
+    color: white;
+}
+
+.timer-content {
+    display: none;
+    text-align: center;
+}
+
+.timer-content.active {
+    display: block;
+}
+
+.timer-display {
+    font-size: 4em;
+    font-weight: bold;
+    color: #667eea;
+    margin: 30px 0;
+    font-family: 'Courier New', monospace;
+    animation: pulse 2s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.clock-display {
+    font-size: 3em;
+    font-weight: bold;
+    color: #667eea;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+.date-display {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.calendar {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    animation: scaleIn 0.3s ease-out backwards;
+}
+
+.calendar-day:hover {
+    background: #f0f0f0;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.calendar-day.header {
+    font-weight: bold;
+    background: #667eea;
+    color: white;
+    cursor: default;
+}
+
+.calendar-day.today {
+    background: #667eea;
+    color: white;
+    font-weight: bold;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+.calendar-day.other-month {
+    color: #ccc;
+}
+
+/* 加密工具样式 */
+.encryption-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.output-area {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 100px;
+    word-wrap: break-word;
+    animation: fadeIn 0.5s ease-out;
+    transition: all 0.3s ease;
+}
+
+.output-area:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+/* 底部样式 */
+footer {
+    background: rgba(255, 255, 255, 0.95);
+    color: #666;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    animation: slideInUp 0.8s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer p {
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+footer:hover p {
+    color: #667eea;
+    transform: scale(1.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timer-display {
+        font-size: 2.5em;
+    }
+
+    .clock-display {
+        font-size: 2em;
+    }
+}
+
+/* ========== 特效动画样式 ========== */
+
+/* 自定义光标 */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #667eea;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, border-color 0.3s;
+    opacity: 0.8;
+}
+
+body:hover .custom-cursor {
+    width: 40px;
+    height: 40px;
+    border-color: #764ba2;
+}
+
+/* 浮动粒子 */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 波纹效果 */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* 彩纸效果 */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    z-index: 9999;
+    animation: confetti-fall 3s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* 输入框聚焦动画 */
+.form-group.focused label {
+    color: #667eea;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* 滚动显示动画 */
+.animate-in {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* 加载完成状态 */
+body.loaded {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 悬停发光效果 */
+.btn, .tool-card, .page-content {
+    position: relative;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+    border-radius: inherit;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    background-size: 200% 200%;
+    animation: gradient-rotate 3s linear infinite;
+}
+
+@keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn:hover::after {
+    opacity: 0.7;
+    filter: blur(10px);
+}
+
+/* 工具图标旋转动画变化 */
+@keyframes icon-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 页面切换效果 */
+.page-transition {
+    animation: pageSlide 0.5s ease-out;
+}
+
+@keyframes pageSlide {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 计数器数字跳动 */
+@keyframes number-jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 悬停提示效果 */
+[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    animation: fadeIn 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* 星光闪烁效果 */
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.tool-icon {
+    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
+}
+
+.tool-card:hover .tool-icon {
+    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.6));
+    animation: twinkle 1s ease-in-out infinite;
+}
+
+/* 表单输入波浪效果 */
+.form-group input:focus,
+.form-group textarea:focus {
+    animation: input-wave 0.5s ease-out;
+}
+
+@keyframes input-wave {
+    0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+    100% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+}
+
+/* 卡片悬停阴影扩散 */
+.tool-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.2) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.tool-card:hover::after {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+/* 加载进度条动画 */
+@keyframes loading-bar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* 响应式动画禁用（移动端性能优化） */
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none;
+    }
+    
+    .particles {
+        display: none;
+    }
+    
+    .tool-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    * {
+        animation-duration: 0.3s !important;
+    }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+    .particle {
+        background: rgba(102, 126, 234, 0.3);
+    }
+}

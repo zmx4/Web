@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册 - 多功能工具集</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛠️ 多功能工具集</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="calculator.html">计算器</a></li>
+                    <li><a href="timer.html">计时工具</a></li>
+                    <li><a href="encryption.html">加密工具</a></li>
+                    <li><a href="encoding.html">编码工具</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html" class="active">注册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-content" style="max-width: 500px; margin: 50px auto;">
+            <h2>📝 用户注册</h2>
+            
+            <form id="register-form" onsubmit="return handleRegister(event)">
+                <div class="form-group">
+                    <label for="reg-username">用户名：<span style="color: red;">*</span></label>
+                    <input type="text" id="reg-username" name="username" required 
+                           placeholder="3-20个字符，只能包含字母、数字、下划线" 
+                           autocomplete="username">
+                    <span class="error-message" id="reg-username-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">邮箱：<span style="color: red;">*</span></label>
+                    <input type="email" id="reg-email" name="email" required 
+                           placeholder="请输入邮箱地址" autocomplete="email">
+                    <span class="error-message" id="reg-email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">密码：<span style="color: red;">*</span></label>
+                    <input type="password" id="reg-password" name="password" required 
+                           placeholder="6-30个字符，建议包含字母和数字" 
+                           autocomplete="new-password">
+                    <span class="error-message" id="reg-password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-confirm-password">确认密码：<span style="color: red;">*</span></label>
+                    <input type="password" id="reg-confirm-password" name="confirm-password" required 
+                           placeholder="请再次输入密码" autocomplete="new-password">
+                    <span class="error-message" id="reg-confirm-password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-phone">手机号码：</label>
+                    <input type="tel" id="reg-phone" name="phone" 
+                           placeholder="请输入手机号码（可选）" autocomplete="tel">
+                    <span class="error-message" id="reg-phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required
+                               style="width: auto; margin-right: 8px;">
+                        <span>我已阅读并同意 <a href="#" style="color: #667eea;">用户协议</a> 和 <a href="#" style="color: #667eea;">隐私政策</a></span>
+                    </label>
+                    <span class="error-message" id="agree-terms-error"></span>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn">注册</button>
+                    <button type="reset" class="btn btn-secondary">重置</button>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: #666;">
+                        已有账号？ 
+                        <a href="login.html" style="color: #667eea; text-decoration: none; font-weight: 500;">
+                            立即登录
+                        </a>
+                    </p>
+                </div>
+
+                <div class="success-message" id="success-message" style="text-align: center; margin-top: 15px;">
+                    注册成功！即将跳转到登录页面...
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 多功能工具集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

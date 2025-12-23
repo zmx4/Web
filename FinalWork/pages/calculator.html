@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器 - 多功能工具集</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛠️ 多功能工具集</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="calculator.html" class="active">计算器</a></li>
+                    <li><a href="timer.html">计时工具</a></li>
+                    <li><a href="encryption.html">加密工具</a></li>
+                    <li><a href="encoding.html">编码工具</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-content">
+            <h2>🔢 计算器</h2>
+            <div class="calculator">
+                <input type="text" class="calculator-display" id="display" readonly value="0">
+                <div class="calculator-buttons">
+                    <button onclick="clearDisplay()" class="clear">C</button>
+                    <button onclick="deleteLast()">←</button>
+                    <button onclick="appendOperator('%')" class="operator">%</button>
+                    <button onclick="appendOperator('/')" class="operator">÷</button>
+                    
+                    <button onclick="appendNumber('7')">7</button>
+                    <button onclick="appendNumber('8')">8</button>
+                    <button onclick="appendNumber('9')">9</button>
+                    <button onclick="appendOperator('*')" class="operator">×</button>
+                    
+                    <button onclick="appendNumber('4')">4</button>
+                    <button onclick="appendNumber('5')">5</button>
+                    <button onclick="appendNumber('6')">6</button>
+                    <button onclick="appendOperator('-')" class="operator">−</button>
+                    
+                    <button onclick="appendNumber('1')">1</button>
+                    <button onclick="appendNumber('2')">2</button>
+                    <button onclick="appendNumber('3')">3</button>
+                    <button onclick="appendOperator('+')" class="operator">+</button>
+                    
+                    <button onclick="appendNumber('0')">0</button>
+                    <button onclick="appendNumber('.')">.</button>
+                    <button onclick="calculate()" class="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 多功能工具集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+</html>

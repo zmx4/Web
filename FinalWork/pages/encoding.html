@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编码工具 - 多功能工具集</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛠️ 多功能工具集</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="calculator.html">计算器</a></li>
+                    <li><a href="timer.html">计时工具</a></li>
+                    <li><a href="encryption.html">加密工具</a></li>
+                    <li><a href="encoding.html" class="active">编码工具</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-content">
+            <h2>💻 编码辅助工具</h2>
+            
+            <div class="form-group">
+                <label>编码类型：</label>
+                <select id="encoding-type">
+                    <option value="base64">Base64 编码/解码</option>
+                    <option value="url">URL 编码/解码</option>
+                    <option value="unicode">Unicode 编码/解码</option>
+                    <option value="hex">十六进制 编码/解码</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>输入文本：</label>
+                <textarea id="encoding-input" placeholder="请输入要编码/解码的文本"></textarea>
+            </div>
+
+            <div class="encryption-controls">
+                <button class="btn" onclick="encode()">📦 编码</button>
+                <button class="btn btn-secondary" onclick="decode()">📂 解码</button>
+                <button class="btn btn-secondary" onclick="clearEncoding()">清空</button>
+                <button class="btn btn-secondary" onclick="copyOutput()">复制结果</button>
+            </div>
+
+            <div class="form-group">
+                <label>输出结果：</label>
+                <div class="output-area" id="encoding-output"></div>
+            </div>
+
+            <div style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin-top: 30px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">编码说明</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Base64：</strong>将二进制数据转换为ASCII字符，常用于在URL中传输数据</li>
+                    <li><strong>URL编码：</strong>将URL中的特殊字符转换为百分号编码格式</li>
+                    <li><strong>Unicode：</strong>将字符转换为Unicode码点表示形式</li>
+                    <li><strong>十六进制：</strong>将文本转换为十六进制表示形式</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 多功能工具集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/encoding.js"></script>
+</body>
+</html>

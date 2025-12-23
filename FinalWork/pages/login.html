@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录 - 多功能工具集</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛠️ 多功能工具集</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="calculator.html">计算器</a></li>
+                    <li><a href="timer.html">计时工具</a></li>
+                    <li><a href="encryption.html">加密工具</a></li>
+                    <li><a href="encoding.html">编码工具</a></li>
+                    <li><a href="login.html" class="active">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-content" style="max-width: 500px; margin: 50px auto;">
+            <h2>👤 用户登录</h2>
+            
+            <form id="login-form" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">用户名：</label>
+                    <input type="text" id="username" name="username" required 
+                           placeholder="请输入用户名" autocomplete="username">
+                    <span class="error-message" id="username-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密码：</label>
+                    <input type="password" id="password" name="password" required 
+                           placeholder="请输入密码" autocomplete="current-password">
+                    <span class="error-message" id="password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" id="remember" name="remember" 
+                               style="width: auto; margin-right: 8px;">
+                        <span>记住我</span>
+                    </label>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn">登录</button>
+                    <button type="reset" class="btn btn-secondary">重置</button>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: #666;">
+                        还没有账号？ 
+                        <a href="register.html" style="color: #667eea; text-decoration: none; font-weight: 500;">
+                            立即注册
+                        </a>
+                    </p>
+                </div>
+
+                <div class="success-message" id="success-message" style="text-align: center; margin-top: 15px;">
+                    登录成功！
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 多功能工具集. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>
