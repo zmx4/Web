@@ -150,7 +150,6 @@ function validateConfirmPassword(password, confirmPassword) {
 }
 
 function validatePhone(phone) {
-    // 验证中国大陆手机号格式
     const phoneRegex = /^1[3-9]\d{9}$/;
     if (!phoneRegex.test(phone)) {
         showError('reg-phone-error', '请输入有效的手机号码！');
